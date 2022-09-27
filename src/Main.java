@@ -5,6 +5,7 @@ public class Main {
         System.out.println("Das ist ein neuer Versuch");
         System.out.println("Das ist Version 2");
         System.out.println("This ist now Version 3");
+        System.out.println("Dennis war hier");
 
         System.out.println("Steven has been here ;-)");
     }
