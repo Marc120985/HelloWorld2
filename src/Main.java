@@ -17,6 +17,8 @@ public class Main {
         }
 
         System.out.println(name.contains("fancy"));
+        System.out.println(name.replaceAll("voll", "ultra"));
+
     }
 
     public static int addition(int number1, int number2){
