@@ -3,20 +3,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        String name = "Das ist voll fancy";
+        String name = "Das ist voll fancy!";
+        System.out.println(name);
 
-        System.out.println("This ist now Version 3");
-        System.out.println("Dennis war hier");
-        System.out.println("Steven has been here ;-)");
+        nameLenght(name);
 
         System.out.println("The Sum is: " + addition(9, 8));
         System.out.println(addString(3, 4));
 
-        if(name.length() < 10){
-            System.out.println("Es sind weniger als 10 Zeichen");
-        }else {
-            System.out.println("Es sind mehr als 10 Zeichen");
-        }
+
 
         System.out.println(name.contains("fancy"));
         System.out.println(name.replaceAll("voll", "ultra"));
@@ -32,6 +27,14 @@ public class Main {
 
     }
 
+    public static void nameLenght(String name){
+        if(name.length() < 10){
+            System.out.println("Es sind weniger als 10 Zeichen");
+        }else {
+            System.out.println("Es sind mehr als 10 Zeichen");
+        }
+    }
+
     public static int addition(int number1, int number2){
         return  number1 + number2;
     }
@@ -43,14 +46,15 @@ public class Main {
     public static void anzahl(int anzahlLeute) {
         System.out.println("Personenanzahl: " + anzahlLeute);
         System.out.println("Max sind 90 Personen erlaubt");
+        int rechner = 90 - anzahlLeute;
          if(anzahlLeute > 90) {
             alarmstufe("rot");
         } else if(anzahlLeute >= 30) {
             alarmstufe("gelb");
-             System.out.println("Es sind noch " + (90-anzahlLeute) + " erlaubt");
+             System.out.println("Es sind noch " + rechner + " erlaubt");
         }else {
             alarmstufe("grün");
-             System.out.println("Es sind noch " + (90-anzahlLeute) + " erlaubt");
+             System.out.println("Es sind noch " + rechner + " erlaubt");
         }
     }
 
