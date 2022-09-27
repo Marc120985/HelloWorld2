@@ -21,8 +21,8 @@ public class Main {
         System.out.println(name.contains("fancy"));
         System.out.println(name.replaceAll("voll", "ultra"));
 
-        anzahl(61);
-        anzahl(31);
+        anzahl(91);
+        anzahl(30);
         anzahl(15);
 
         anzahlSwitch(30);
@@ -41,15 +41,16 @@ public class Main {
     }
 
     public static void anzahl(int anzahlLeute) {
-         if(anzahlLeute > 60) {
-            System.out.println("Zu viele Personen!");
+        System.out.println("Personenanzahl: " + anzahlLeute);
+        System.out.println("Max sind 90 Personen erlaubt");
+         if(anzahlLeute > 90) {
             alarmstufe("rot");
-        } else if(anzahlLeute > 30) {
-            System.out.println("Max noch 30 Personen erlaubt");
+        } else if(anzahlLeute >= 30) {
             alarmstufe("gelb");
+             System.out.println("Es sind noch " + (90-anzahlLeute) + " erlaubt");
         }else {
-            System.out.println("Maximale Personenanzahl nicht erreicht");
             alarmstufe("grün");
+             System.out.println("Es sind noch " + (90-anzahlLeute) + " erlaubt");
         }
     }
 
