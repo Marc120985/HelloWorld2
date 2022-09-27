@@ -13,6 +13,6 @@ public class Main {
     }
 
     public static String addString(int number3, int number4) {
-        return "Summe: " + (number3 + number4);
+        return "Die Summe ist: " + (number3 + number4);
     }
 }
