@@ -21,9 +21,14 @@ public class Main {
         System.out.println(name.contains("fancy"));
         System.out.println(name.replaceAll("voll", "ultra"));
 
-        anzahl(30);
+        anzahl(61);
         anzahl(31);
         anzahl(15);
+
+        anzahlSwitch(30);
+        anzahlSwitch(32);
+
+
 
     }
 
@@ -36,12 +41,45 @@ public class Main {
     }
 
     public static void anzahl(int anzahlLeute) {
-         if(anzahlLeute > 30) {
+         if(anzahlLeute > 60) {
             System.out.println("Zu viele Personen!");
-        } else if(anzahlLeute == 30) {
-            System.out.println("Maximale Anzahl erreicht");
+            alarmstufe("rot");
+        } else if(anzahlLeute > 30) {
+            System.out.println("Max noch 30 Personen erlaubt");
+            alarmstufe("gelb");
         }else {
             System.out.println("Maximale Personenanzahl nicht erreicht");
+            alarmstufe("grün");
+        }
+    }
+
+     public static void anzahlSwitch(int anzahlLeute) {
+        switch (anzahlLeute) {
+            case 30:
+                System.out.println("Maximale Zahl erreicht");
+                break;
+            case 31:
+                System.out.println("Zu viele Personen");
+                break;
+            default:
+                System.out.println("Switch macht keinen Sinn");
+        }
+    }
+
+    public static void alarmstufe(String farbe){
+        switch (farbe) {
+            case "rot":
+                System.out.println("Alarmstufe ROT!");
+                break;
+            case "gelb":
+                System.out.println("Alarmstufe GELB!");
+                break;
+            case "grün":
+                System.out.println("Alarmstufe GRÜN!");
+                break;
+            default:
+                break;
+
         }
     }
 }
