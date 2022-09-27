@@ -23,8 +23,6 @@ public class Main {
         anzahlSwitch(30);
         anzahlSwitch(32);
 
-
-
     }
 
     public static void nameLenght(String name){
