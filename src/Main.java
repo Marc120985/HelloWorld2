@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -19,6 +21,10 @@ public class Main {
         System.out.println(name.contains("fancy"));
         System.out.println(name.replaceAll("voll", "ultra"));
 
+        anzahl(30);
+        anzahl(31);
+        anzahl(15);
+
     }
 
     public static int addition(int number1, int number2){
@@ -27,5 +33,15 @@ public class Main {
 
     public static String addString(int number3, int number4) {
         return "Die Summe ist: " + (number3 + number4);
+    }
+
+    public static void anzahl(int anzahlLeute) {
+         if(anzahlLeute > 30) {
+            System.out.println("Zu viele Personen!");
+        } else if(anzahlLeute == 30) {
+            System.out.println("Maximale Anzahl erreicht");
+        }else {
+            System.out.println("Maximale Personenanzahl nicht erreicht");
+        }
     }
 }
