@@ -11,8 +11,6 @@ public class Main {
         System.out.println("The Sum is: " + addition(9, 8));
         System.out.println(addString(3, 4));
 
-
-
         System.out.println(name.contains("fancy"));
         System.out.println(name.replaceAll("voll", "ultra"));
 
@@ -20,8 +18,14 @@ public class Main {
         anzahl(30);
         anzahl(15);
 
-        anzahlSwitch(30);
-        anzahlSwitch(32);
+  //      anzahlSwitch(30);
+  //      anzahlSwitch(32);
+
+  //      versuchScanner();
+
+        System.out.println("Ab hier soll der Taschenrechner laufen");
+        taschenrechner();
+
 
     }
 
@@ -56,7 +60,7 @@ public class Main {
         }
     }
 
-     public static void anzahlSwitch(int anzahlLeute) {
+/*     public static void anzahlSwitch(int anzahlLeute) {
         switch (anzahlLeute) {
             case 30:
                 System.out.println("Maximale Zahl erreicht");
@@ -68,7 +72,7 @@ public class Main {
                 System.out.println("Switch macht keinen Sinn");
         }
     }
-
+*/
     public static void alarmstufe(String farbe){
         switch (farbe) {
             case "rot":
@@ -83,6 +87,38 @@ public class Main {
             default:
                 break;
 
+        }
+    }
+
+    public static void versuchScanner(){
+        Scanner scannerVersuch = new Scanner(System.in);
+        System.out.println("Please type a Text and press Enter");
+        String textInput = scannerVersuch.nextLine();
+        System.out.println("Your Text is: " + textInput);
+    }
+
+    public static void taschenrechner(){
+        Scanner rechner = new Scanner(System.in);
+        System.out.println("Bitte geb die erste Zahl ein:");
+        double number1 = rechner.nextDouble();
+        rechner.nextLine();
+        System.out.println("Bitte gebe deine Rechenoption ein: (+, -, *, /)");
+        String operand = rechner.nextLine();
+        System.out.println("Bitte gebe deine zweite Zahl ein: ");
+        double number2 = rechner.nextDouble();
+        rechner.nextLine();
+
+        if(operand.equals("+")){
+            double result = number1 + number2;
+            System.out.println("Dein Ergebnis ist: " + result);
+        }else if(operand.equals("-")){
+            double result = number1 - number2;
+        }else if(operand.equals("*")){
+            double result = number1 * number2;
+        }else if(operand.equals("/")){
+            double result = number1 / number2;
+        }else {
+            System.out.println("Die Eingabe war nicht korrekt");
         }
     }
 }
